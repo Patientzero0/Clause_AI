@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400&display=swap');
+
+:root {
+    /* Default Dark Mode (Bhartiya Gothic) - WCAG AA compliant */
+    --bg-primary: #050505;
+    /* Deepest Black */
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #121212;
+
+    --surface-1: rgba(255, 255, 255, 0.02);
+    --surface-2: rgba(255, 255, 255, 0.04);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+
+    --border-color: rgba(255, 255, 255, 0.08);
+
+    /* Tricolor Accents - Dark Mode - Enhanced contrast */
+    --color-saffron: #FF9933;
+    --color-india-green: #138808;
+    --color-chakra-blue: #000080;
+
+    --primary: #FF9933;
+    /* Saffron as primary in dark mode */
+    --primary-dim: rgba(255, 153, 51, 0.15);
+    --secondary-accent: #138808;
+    /* Green */
+
+    --text-primary: #f0f0f0;
+    /* Lighter for better contrast (WCAG AA) */
+    --text-secondary: #b0b0b0;
+    /* Lighter secondary text */
+    --text-muted: #808080;
+    /* Lighter muted text */
+
+    /* Spacing */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Fonts */
+    --font-display: 'Cinzel', serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+[data-theme='light'] {
+    /* Royal Court Light Mode - High Contrast */
+    --bg-primary: #FFFFFF;
+    /* Pure White */
+    --bg-secondary: #F8F9FA;
+    /* Very Light Gray */
+    --bg-tertiary: #F0F0F0;
+
+    --surface-1: rgba(0, 0, 0, 0.04);
+    --surface-2: rgba(0, 0, 0, 0.06);
+    --surface-hover: rgba(0, 0, 0, 0.08);
+
+    --border-color: rgba(0, 0, 0, 0.15);
+    /* Distinct Border */
+
+    /* Tricolor Accents - Light Mode - Enhanced contrast */
+    --primary: #D46600;
+    /* Deep Saffron */
+    --primary-dim: rgba(212, 102, 0, 0.1);
+    --secondary-accent: #0A5503;
+    /* Deep Green */
+
+    --text-primary: #000000;
+    /* Pure Black */
+    --text-secondary: #333333;
+    /* Dark Gray */
+    --text-muted: #555555;
+    /* Medium Gray */
+    --color-chakra-blue: #000080;
+    /* Deep Blue */
+    --color-saffron: #D46600;
+    /* Deep Saffron */
+    --color-india-green: #0A5503;
+    /* Deep Green */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-serif);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-size: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+}
+
+button {
+    font-family: var(--font-display);
+    cursor: pointer;
+    border: none;
+    background: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Utilities */
+.glass-panel {
+    background: var(--surface-1);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-tricolor-gradient {
+    background: linear-gradient(135deg, var(--color-saffron) 0%, var(--text-primary) 50%, var(--color-india-green) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-saffron) 0%, #D46600 100%);
+    color: white;
+    /* Always white text on Saffron button - WCAG AAA contrast */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+}
+
+[data-theme='light'] .btn-primary {
+    background: linear-gradient(135deg, #D46600 0%, #B85400 100%);
+    color: white;
+    /* Darker saffron in light mode for better contrast */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+}
+
+.border-glow {
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.border-glow:hover {
+    border-color: var(--color-saffron);
+    box-shadow: 0 0 15px rgba(255, 153, 51, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--surface-2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-saffron);
+}

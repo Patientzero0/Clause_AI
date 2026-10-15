@@ -1,0 +1,38 @@
+﻿# Core LangChain - Modern Components
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-chroma>=0.1.4
+langchain-text-splitters
+langchain-huggingface
+langchain-ollama
+
+# Vector DB
+chromadb>=0.5.0
+sentence-transformers<6
+transformers<5
+
+# API & Server
+fastapi
+uvicorn
+python-multipart
+pydantic>=2.0.0
+supabase
+
+# Evaluation
+ragas>=0.1.0
+datasets<5
+pandas
+
+# Web Search
+tavily-python
+langchainhub  # Optional: for agent prompts (web search)
+
+# Utilities
+python-dotenv
+tqdm
+rank_bm25
+pypdf
+httpx
+torch
+numpy

@@ -1,0 +1,91 @@
+################################
+# OS / Editor
+################################
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+################################
+# Python
+################################
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environment
+venv/
+
+################################
+# Python build / cache
+################################
+*.pkl
+*.sqlite3
+*.db
+
+################################
+# Chroma / Vector DB
+################################
+chroma_db/
+doc_store/
+backend/data/
+
+################################
+# Node / React
+################################
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+################################
+# Logs
+################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+################################
+# Temporary / Debug
+################################
+debug_import.py
+reproduce_issue.py
+
+################################
+# Coverage / Tests
+################################
+.coverage
+coverage/
+
+################################
+# Misc
+################################
+*.tmp
+*.swp
+
+################################
+# ANDROID / CAPACITOR (ADDED THIS SECTION)
+################################
+# Android generated build files
+Frontend/android/build/
+Frontend/android/app/build/
+Frontend/android/.gradle/
+
+# Android Local Configuration (Never commit these!)
+Frontend/android/local.properties
+Frontend/android/project.properties
+Frontend/android/project.local
+
+# Android Studio IDE settings
+Frontend/android/.idea/
+Frontend/android/*.iml
+Frontend/android/app/*.iml
+
+# Capacitor specific
+Frontend/android/capacitor.settings.gradle
